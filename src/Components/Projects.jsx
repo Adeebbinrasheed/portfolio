@@ -13,15 +13,17 @@ const Projects = () => {
     },
   ];
   return (
+    <div className="pt-5 h-auto">
+
+      <h1 className="text-3xl md:text-5xl font-bold text-center">Projects</h1>
     <div
-      className="flex flex-col md:flex-row gap-3 justify-center items-center pt-6"
+      className="grid grid-cols-1 justify-items-center sm:grid-cols-2 lg:px-9 md:grid-cols-3 pt-5"
       id="project"
     >
-      <h1 className="text-3xl font-bold">Projects</h1>
 
       {data.map((item) => (
-        <div className="border-2  flex  flex-col items-center h-[50vh]  mt-5 space-y-9 rounded-lg transform transition-transform duration-300 hover:scale-105">
-          <div className="overflow-hidden w-72 h-42">
+        <div className="border-2  flex  flex-col items-center w-[35vh] lg:w-[40vh] h-[50vh]  mt-5 space-y-9 rounded-lg transform transition-transform duration-300 hover:scale-105">
+          <div className="overflow-hidden ">
             <img
               src={item.image}
               alt=""
@@ -39,6 +41,7 @@ const Projects = () => {
           </div>
         </div>
       ))}
+    </div>
     </div>
   );
 };

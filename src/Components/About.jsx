@@ -1,19 +1,27 @@
 import React from "react";
-import black from "../assets/black.jpeg";
+import img from "../assets/img.jpeg";
 
 const About = () => {
   return (
-    <div className="h-auto flex  flex-col md:flex-row items-center bg-slate-800 mx-2 gap-2 pt-10 mt-12 space-y-5" id="about">
-      <h1 className="text-3xl font-bold">About Me</h1>
-      <div>
-        <img src={black} alt="" width={350}/>
-      </div>
-      <div className="text-center">
-        
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus
-          aspernatur officiis saepe ducimus nostrum modi quam sus
-        </p>
+    <div className="mt-36 h-auto ">
+      <h1 className="text-4xl text-center font-bold">About Me</h1>
+      <div
+        className=" flex flex-col md:flex-row-reverse items-center px-2 md:px-0  bg-slate-800 mx-2 md:mx-6 md:gap-20 mt-5  space-y-3 py-2"
+        id="about"
+      >
+        <div className="md:w-1/2">
+          <p className="text-gray-400 text-balance">
+            I am a passionate fresher web developer with a strong foundation in
+            React.js, HTML, and Tailwind CSS. I enjoy building responsive and
+            user-friendly web applications, continuously learning new
+            technologies, and improving my skills to create impactful digital
+            experiences
+          </p>
+        </div>
+
+        <div className="">
+          <img src={img} alt="" className="w-full h-52 object-cover rounded-lg" />
+        </div>
       </div>
     </div>
   );
