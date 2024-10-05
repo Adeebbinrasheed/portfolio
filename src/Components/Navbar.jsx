@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { BiMenuAltRight } from "react-icons/bi";
 import { MdOutlineClose } from "react-icons/md";
-import home from "../Pages/Home";
-import image from "../assets/aa.png";
+
 
 import { motion } from "framer-motion";
 
@@ -15,9 +14,9 @@ const Navbar = () => {
   return (
     <div className="fixed z-10 w-full  flex justify-between  items-center bg-slate-950 py-5 px-7  text-white">
       <div className="md:pl-7">
-        <img src={image} alt="" width={50} />
+        <h1 className="text-2xl pl-9 font-new ">ADEEB</h1>
       </div>
-      <div className="space-x-14 text-xl hidden md:block">
+      <div className="space-x-32 text-xl hidden md:block font-mono ">
         <a href="#home" className="hover:underline hover:text-gray-500"> 
           Home
         </a>
@@ -31,9 +30,6 @@ const Navbar = () => {
           Contact
         </a>
       </div>
-      <button className="border px-3 hidden md:block bg-black text-white rounded-full">
-        Let's talk
-      </button>
       <div className="md:hidden">
         <button className="text-2xl" onClick={togglemenu}>
           {open ? <MdOutlineClose /> : <BiMenuAltRight />}
@@ -43,7 +39,6 @@ const Navbar = () => {
         <motion.div
           initial={{ y: -100, opacity: 1, scale: 1 }}
           animate={{ y: 100, opacity: 1, scale: 1 }}
-          //    exit={{ x: 100, opacity: 0, scale: 0.8 }}
           transition={{ duration: 0.2 }}
           className="absolute mt-36 left-0   right-0 bg-black md:hidden  text-center mx-3 rounded-xl p-5"
         >

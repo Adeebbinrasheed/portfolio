@@ -8,7 +8,8 @@ import adeeb from '../assets/adeeb1.jpg'
 
 const Hero = () => {
   return (
-    <div className="pt-24 min-h-screen flex flex-col sm:flex-row-reverse md:flex-row-reverse space-y-6 md:gap-7 justify-center  items-center ">
+    <div 
+     className="pt-24 min-h-screen flex flex-col sm:flex-row-reverse md:flex-row-reverse space-y-6 md:gap-7 justify-center  items-center ">
       <img
         src={adeeb}
         alt=""

@@ -3,10 +3,10 @@ import img from "../assets/img.jpeg";
 
 const About = () => {
   return (
-    <div className="mt-36 h-auto ">
-      <h1 className="text-4xl text-center font-bold">About Me</h1>
+    <div className="mt-36 h-auto  ">
+      <h1 className="text-4xl text-center  font-bold underline ">About <span className="text-red-600">Me</span></h1>
       <div
-        className=" flex flex-col md:flex-row-reverse items-center px-2 md:px-0  bg-slate-800 mx-2 md:mx-6 md:gap-20 mt-5  space-y-3 py-2"
+        className=" flex flex-col md:flex-row-reverse items-center px-2 md:px-0   mx-2 md:mx-6 md:gap-20 mt-5  space-y-3 py-3"
         id="about"
       >
         <div className="md:w-1/2">
