@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-    scroll-behavior: smooth;
-  }
+
+.text-stroke{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: gray;
+    -webkit-text-stroke-width: 1px
+    
+}

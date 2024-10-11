@@ -22,12 +22,12 @@ const Projects = () => {
     }
   ];
   return (
-    <div className="pt-5 mt-20 h-auto">
-
-      <h1 className="text-3xl md:text-5xl font-bold text-center"><span className="text-red-600">P</span>rojects</h1>
+    <div className="pt-5 mt-20 h-auto" id="project">
+                      
+      <h1 className="text-6xl sm:text-7xl lg:text-[300px] text-center font-bold opacity-50"><span className="text-red-600">P</span>rojects</h1>
     <div
       className="grid grid-cols-1 gap-5 justify-items-center sm:grid-cols-2 lg:px-9 md:grid-cols-3 pt-5"
-      id="project"
+      
     >
 
       {data.map((item) => (
@@ -36,16 +36,20 @@ const Projects = () => {
             <img
               src={item.image}
               alt=""
-              className="w-full h-full object-cover rounded-lg "
+              className="w-full h-full object-cover rounded-lg"              
             />
+            
           </div>
           <h1 className="text-2xl font-bold text-center">{item.pname}</h1>
           <div className="space-x-2">
             <button className="bg-red-800 p-1 px-3 font-semibold rounded-lg text-lg hover:bg-red-600 transition duration-300">
               <a href={item.website}>LIVE</a>
-            </button>
+            </button> 
+
+
+
           </div>
-        </div>
+        </div> 
       ))}
     </div>
     </div>
