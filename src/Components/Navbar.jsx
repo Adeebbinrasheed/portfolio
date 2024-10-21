@@ -12,7 +12,7 @@ const Navbar = () => {
     setOpen(!open);
   };
   return (
-    <div className="fixed z-10 w-full flex justify-between  items-center bg-black  py-3 px-7  text-white">
+    <div className="fixed z-10 w-full flex justify-between  items-center bg-gradient-to-r from-black to-gray-800  py-3 px-7  text-white">
       <div className="md:pl-7">
         <h1 className="text-2xl pl-7 font-new ">ADEEB</h1>
       </div> 

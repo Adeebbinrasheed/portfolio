@@ -9,14 +9,23 @@ import image1 from "../assets/black.jpeg";
 import { useScroll, useTransform, motion } from "framer-motion";
 
 const Hero = () => {
+  const textVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, x: 0, transition: { duration: 2 } },
+  };
   const { scrollYProgress } = useScroll();
   const right = useTransform(scrollYProgress, [0, 1], [0, -600]);
   const left = useTransform(scrollYProgress, [0, 1], [0, 600]);
 
   return (
     <>
-      <Parallax bgImage={image1} strength={900}>
-        <div style={{ height: 700 }}>
+      {/* <Parallax bgImage={image1} strength={900}> */}
+        <motion.div 
+        initial='hidden'    
+        whileInView='visible'
+        variants={textVariants}
+        viewport={{ once: true, amount: 0.4 }}
+        style={{ height: 700 }}>
           <div>
             <div className="pt-20  flex flex-col sm:flex-row-reverse md:flex-row-reverse space-y-6 md:gap-7 justify-center  items-center "  id="home">
               <img
@@ -33,6 +42,7 @@ const Hero = () => {
                   sequence={["Iam a web developer", 1000, ""]}
                   className="text-lg md:text-3xl font-new"
                   speed={50}
+                  
                   repeat={Infinity}
                 />
                 <h1 className="font-semibold text-gray-500">Find Me In</h1>
@@ -70,8 +80,8 @@ const Hero = () => {
               </motion.h1>
             </div>
           </div>
-        </div>
-      </Parallax>
+        </motion.div>
+      {/* </Parallax> */}
     </>
   );
 };

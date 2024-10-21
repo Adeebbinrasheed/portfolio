@@ -1,21 +1,22 @@
-import React from 'react'
-import Navbar from './Components/Navbar'
-import Hero from './Components/Hero'
-import About from './Components/About'
-import Projects from './Components/Projects'
-import {motion, useScroll} from 'framer-motion'
+import React from 'react';
+import Navbar from './Components/Navbar';
+import Hero from './Components/Hero';
+import About from './Components/About';
+import Projects from './Components/Projects';
+
 
 const App = () => {
-  
   return (
-    <div className=' bg-black text-white antialiased'>
+    <div 
+      className="bg-[url('./assets/wall.avif')] bg-cover bg-center bg-fixed 
+                  text-white antialiased"
+    >
       <Navbar />
-      <Hero/>
-      <About/>
-      <Projects/>
+      <Hero />
+      <About />
+      <Projects />
     </div>
-    
-  )
-}
+  );
+};
 
-export default App
+export default App;

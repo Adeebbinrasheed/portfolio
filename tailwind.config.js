@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily:{
-        new:["Caveat", "cursive"]
+        new:["Caveat", "cursive"],
+        new1:["Bricolage Grotesque", "sans-serif"]
        },
     },
   },
