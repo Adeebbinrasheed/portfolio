@@ -14,3 +14,7 @@
 body {
   overflow-x: hidden;
 }
+
+.vertical-timeline-element-date {
+  color: rgb(0, 0, 0);
+}
