@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed z-20 w-full flex justify-between items-center bg-opacity-55 py-3 px-7 text-white">
+    <div className=" w-full flex justify-between items-center bg-opacity-55 py-3 px-7 text-white">
       <h1 className="text-2xl text-black font-new">ADEEB</h1>
 
       <div className="md:hidden">
