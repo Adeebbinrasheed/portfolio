@@ -25,7 +25,7 @@ const Hero = () => {
           WEB DEVELOPER
         </motion.h1>
         <motion.h1
-          className="xl:text-[10rem] lg:text-[7rem] md:text-[5rem] sm:text-[5rem] text-[2rem] text-stroke opacity-50"
+          className="xl:text-[10rem] lg:text-[7rem] md:text-[5rem] sm:text-[5rem] text-[2rem] text-stroke  opacity-50"
           style={{ x: left }}
         >
           REACT DEVELOPER
@@ -43,7 +43,7 @@ const Hero = () => {
         <img
           src={adeeb}
           alt="Adeeb"
-          className="rounded-full w-56 h-56 md:w-80 md:h-80 shadow-[0_0_20px_8px_rgba(0,0,0)]"
+          className="rounded-full w-56 h-56 md:w-80 md:h-80 shadow-[0_0_18px_1px_rgba(0,0,0)]"
         />
         <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-600">
           Hi, <span className="text-black">ADEEB BIN RASHEED</span>
