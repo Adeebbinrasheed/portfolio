@@ -1,88 +1,91 @@
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
-import { FaWhatsapp } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa6";
-import { FaLinkedin } from "react-icons/fa";
+import { FaWhatsapp, FaInstagram, FaLinkedin } from "react-icons/fa";
 import adeeb from "../assets/adeeb1.jpg";
-import { Parallax } from "react-parallax";
-import image1 from "../assets/black.jpeg";
 import { useScroll, useTransform, motion } from "framer-motion";
+import { FloatingWhatsApp } from 'react-floating-whatsapp';
 
 const Hero = () => {
   const textVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, x: 0, transition: { duration: 2 } },
   };
+
   const { scrollYProgress } = useScroll();
   const right = useTransform(scrollYProgress, [0, 1], [0, -600]);
   const left = useTransform(scrollYProgress, [0, 1], [0, 600]);
 
   return (
-    <>
-      {/* <Parallax bgImage={image1} strength={900}> */}
-        <motion.div 
-        initial='hidden'    
-        whileInView='visible'
+    <div className="relative flex flex-col items-center justify-center h-screen overflow-hidden  text-white">
+      
+      <div className="absolute inset-0 z-0 flex flex-col items-center justify-center">
+        <motion.h1
+          className="xl:text-[10rem] lg:text-[7rem] md:text-[5rem] sm:text-[5rem] text-[1rem] text-stroke opacity-50"
+          style={{ x: right }}
+        >
+          WEB DEVELOPER
+        </motion.h1>
+        <motion.h1
+          className="xl:text-[10rem] lg:text-[7rem] md:text-[5rem] sm:text-[5rem] text-[1rem] text-stroke opacity-50"
+          style={{ x: left }}
+        >
+          REACT DEVELOPER
+        </motion.h1>
+      </div>
+
+      {/* Main Content */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
         variants={textVariants}
         viewport={{ once: true, amount: 0.4 }}
-        style={{ height: 700 }}>
-          <div>
-            <div className="pt-20  flex flex-col sm:flex-row-reverse md:flex-row-reverse space-y-6 md:gap-7 justify-center  items-center "  id="home">
-              <img
-                src={adeeb}
-                alt=""
-                className="rounded-full w-64 h-64 md:w-80 md:h-80 shadow-[0_0_20px_8px_rgba(255,0,0,0.3)]"
-               
-              />
-              <div className=" flex flex-col space-y-2 p-1 ">
-                <h1 className="text-2xl  md:text-4xl lg:text-5xl font-bold">
-                  Hi,<span className="text-red-500">ADEEB BIN RASHEED</span>
-                </h1>
-                <TypeAnimation
-                  sequence={["Iam a web developer", 1000, ""]}
-                  className="text-lg md:text-3xl font-new"
-                  speed={50}
-                  
-                  repeat={Infinity}
-                />
-                <h1 className="font-semibold text-gray-500">Find Me In</h1>
+        className="relative z-10 flex flex-col items-center text-center space-y-4 md:space-y-6 pt-20"
+      >
+        <img
+          src={adeeb}
+          alt="Adeeb"
+          className="rounded-full w-64 h-64 md:w-80 md:h-80 shadow-[0_0_20px_8px_rgba(0,0,0)]"
+        />
+        <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-600">
+          Hi, <span className="text-black">ADEEB BIN RASHEED</span>
+        </h1>
+        <TypeAnimation
+          sequence={["I am a web developer", 1000, ""]}
+          className="text-lg md:text-3xl font-new text-slate-500"
+          speed={50}
+          repeat={Infinity}
+        />
+        <h1 className="font-semibold text-gray-500">Find Me On</h1>
 
-                <div className="flex space-x-6 ">
-                  <button className="border-2  border-white rounded-full p-1 w-7 h-7 flex justify-center items-center hover:bg-green-500 hover:text-white ">
-                    <FaWhatsapp />
-                  </button>
-                  <button className="border-2  border-white rounded-full p-1 w-7 h-7 flex justify-center items-center hover:bg-pink-700 hover:text-white">
-                    <FaInstagram />
-                  </button>
-                  <button className="border-2  border-white rounded-full p-1 w-7 h-7 flex justify-center items-center hover:bg-blue-500 hover:text-white">
-                    <FaLinkedin />
-                  </button>
-                </div>
-                <div className="pt-4">
-                  <button class="relative h-[0px] w-40 overflow-hidden border-x-4 rounded-full border-red-800 transition-all before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:duration-500 after:absolute after:right-0 after:top-0 after:h-full after:w-0 after:duration-500 hover:text-white hover:shadow-red-400 hover:before:w-2/4 hover:before:bg-red-800 hover:after:w-2/4 hover:after:bg-red-800">
-                    <span class="relative z-10">Resume</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col md:gap-4 items-center">
-              <motion.h1
-                className="lg:text-9xl sm:text-7xl text-4xl text-stroke"
-                style={{ x: right }}
-              >
-                WEB DEVELOPER
-              </motion.h1>
-              <motion.h1
-                className="lg:text-9xl sm:text-7xl text-4xl text-stroke "
-                style={{ x: left }}
-              >
-                REACT DEVELOPER
-              </motion.h1>
-            </div>
-          </div>
-        </motion.div>
-      {/* </Parallax> */}
-    </>
+        <div className="flex space-x-4">
+
+
+          <a href="https://wa.me/7034407807" target="_blank" rel="noopener noreferrer">
+            <button className="border-2 border-black rounded-full p-2 hover:bg-green-500 hover:text-white transition-all">
+              <FaWhatsapp className="text-black"/>
+            </button>
+          </a>
+          <a href="https://www.instagram.com/adeebbinrasheed/profilecard/?igsh=MTN4Zm01cXV5MmJ1Mg== " target="_blank" rel="noopener noreferrer">
+            <button className="border-2 border-black rounded-full p-2 hover:bg-pink-700 hover:text-white transition-all">
+              <FaInstagram className="text-black"/>
+            </button>
+          </a>
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+            <button className="border-2 border-black rounded-full p-2 hover:bg-blue-500 hover:text-white transition-all">
+              <FaLinkedin className="text-black"/>
+            </button>
+          </a>
+        </div>
+      </motion.div>
+
+      {/* Floating WhatsApp Button */}
+      <FloatingWhatsApp
+        phoneNumber="7034407807"
+        accountName="Adeeb"
+        chatMessage="Hello there! 🤝 How can I help you?"
+        className="z-50"
+      />
+    </div>
   );
 };
 
